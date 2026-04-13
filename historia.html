@@ -5,17 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="description" content="Site de um jogo de plataforma 2d (Level Hard)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="styleH.css" />
     <link rel="icon" href="imgs/logo.png">
   </head>
   <body>
     <header>
       <a href="index.html" title="Home">
-        <img src="imgs/logo.png" alt="Level Hard" title="Level Hard" />
+        <img src="imgs/logo.png" alt="Level Hard" title="Level Hard">
+        <span class="titulo">LEVEL HARD</span>
       </a>
+
+        <a href="javascript: mostrarmenu()" class="menu">
+            <i class="fas fa-bars"></i>
+        </a>
+
       <nav>
-        <ul class="menu">
-          <li class="inicio">
+        <ul>
+          <li>
             <a href="./index.html">INÍCIO</a>
           </li>
           <li>
@@ -52,9 +59,9 @@
                     </div>
                 </div>
 
-                <div class="coluna">
-                    <div class="card2">
-                        <img class="img1" src="imgs/parte2jogo.png" alt="Imagem de um controle de video game moderno" title="Imagem de um controle de video game moderno">
+                <div class="colunaparte2">
+                    <div class="cardparte2">
+                        <img class="imgparte2" src="imgs/parte2jogo.png" alt="Imagem de um controle de video game moderno" title="Imagem de um controle de video game moderno">
                     </div>
                 </div>
 
@@ -63,6 +70,12 @@
                         <h2 class="mundo">O Objetivo</h2>
                         <p class="texto1">Chegar à porta de saída parece simples, mas a geometria deste mundo é traiçoeira. As armadilhas se movem e reagem aos seus saltos, punindo com a morte qualquer descuido.</p>
                         <p class="texto2">O objetivo central não é apenas chegar à porta, mas dominar o ciclo de tentativa e erro. a cada derrota, você memoriza o comportamento do cenário.</p>
+                    </div>
+                </div>
+
+                <div class="colunaresponsivo">
+                    <div class="cardresponsivo">
+                        <img class="imgresponsivo" src="imgs/parte2jogo.png" alt="Imagem de um controle de video game moderno" title="Imagem de um controle de video game moderno">
                     </div>
                 </div>
 
@@ -109,5 +122,12 @@
         </div>
         <p class="rodape3" >Desenvolvido por Damires Sales</p>
     </footer>
+
+    <script>
+        function mostrarmenu(){
+            document.querySelector("header nav").classList.toggle("mostrar")
+        }
+    </script>
+
   </body>
 </html>

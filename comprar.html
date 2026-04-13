@@ -12,10 +12,16 @@
     <header>
         <a href="index.html" title="Home">
             <img src="imgs/logo.png" alt="Level Hard" title="Level Hard">
+            <span class="titulo">LEVEL HARD</span>
         </a>
+
+        <a href="javascript: mostrarmenu()" class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
         <nav>
-            <ul class="menu">
-                <li class="inicio">
+            <ul>
+                <li>
                     <a href="./index.html">INÍCIO</a>
                 </li>
                 <li>
@@ -31,7 +37,7 @@
         </nav>
     </header>
 
-    <section>
+    <main>
         <h1>FINALIZAR A COMPRA</h1>
         <p>Complete sua pedido de forma rápida e segura</p>
          <div class="grid">
@@ -52,14 +58,32 @@
                     </div>
                 </div>
 
+
                 <div class="coluna">
                     <div class="card2">
-                        <h2 class="mensagem">2. Forma de Pagamento</h2>
+                        <h2 class="mensagem">2. Formas de Pagamento</h2>
+                        <div class="metodospagamento">
+                            <input type="radio"  name="pagamento" id="cartao" checked>
+                            <label for="cartao" class="cartao-metodo">
+                                <div class="conteudo">
+                                    <strong>Cartão de Crédito</strong>
+                                    <span>Parcele em até 3x sem juros</span>
+                                </div>
+                            </label>
+
+                            <input type="radio" name="pagamento" id="pix">
+                            <label for="pix" class="cartao-metodo">
+                                <div class="conteudo">
+                                    <strong>Pix</strong>
+                                    <span>Aprovação imediata</span>
+                                </div>
+                            </label>
+                        </div>
                     <form>
                         <label class="cartao" for="cartao">Número do Cartão</label>
                         <input type="text" id="cartao" name="cartao" placeholder="0000 0000 0000 0000" required autocomplete="off" class="formulario">
 
-                        <label class="nome" for="nome">Nome no Cartão</label>
+                        <label class="nomeC" for="nome">Nome no Cartão</label>
                         <input type="text" id="nome" name="nome" placeholder="seu@gmail.com" required autocomplete="off" class="formulario">
 
                         <label class="validade" for="validade">Validade</label>
@@ -68,7 +92,7 @@
                         <label class="cvv" for="cvv">CVV</label>
                         <input type="text" id="cvv" name="cvv" placeholder="000" required autocomplete="off" class="formulario">
 
-                        <label for="parcela">Parcelamento</label>
+                        <label class="parcela" for="parcela">Parcelamento</label>
                         <select type="text" id="parcela" name="parcela" required class="formulario">
                             <option value="">1x de R$ 29,90 sem juros</option>
                             <option value="">2x de R$ 14,95 sem juros</option>
@@ -79,14 +103,55 @@
                 </div>
             </div>
 
-            <div class="gridCompra">
-                <div class="colunaCompra">
-                    <div class="cardCompra">
+            <div class="grid2">           
+                <div class="coluna2">
+                    <div class="resumocompra">
+                        <h2>Resumo do pedido</h2>
 
+                        <div class="cardcompra">
+                            <img class="carrinho" src="imgs/carrinho.png">
+                            <div class="nome">Level Hard</div>
+                            <div class="tipo" >Jogo de Plataforma</div>
+                            <img class="estrela" src="imgs/estrelas.png">
+                        </div>
+
+                        <div class="subtotal">
+                            <span>Subtotal</span>
+                            <span class="preco">R$ 49,90</span>
+                        </div>
+
+                        <div class="desconto">
+                            <span>Desconto (40%)</span>
+                            <span> - R$ 29,90</span>
+                        </div>
+
+                        <div class="total">
+                            <span>Total</span>
+                            <span>R$ 29,90</span>
+                        </div>
+
+                        <ul class="beneficios">
+                            <li>Jogo disponível imediato após pagamento</li>
+                            <li>Atualizações gratuitas vitalícias</li>
+                            <li>Garantia de 7 dias</li>
+                            <li>Suporte técnico dedicado</li>
+                        </ul>
+
+                        <a href="jogo.html">
+                        <button class="btn-finalizar"> <a href="jogo.html">Finalizar Compra</a></button>
+                        </a>
+                
+                        <div class="seguranca">
+                            <div class="info-segura">
+                                <span>Compra Segura</span>
+                                <span>Acesso Imediato</span>
+                            </div>
+                            <a href="index.html" class="btn-voltartelainicial"> Voltar para a página inicial</a>
+                        </div>
                     </div>
                 </div>
             </div>
-    </section>
+    </main>
 
      <footer>
         <div class="grid3">
@@ -116,5 +181,12 @@
         </div>
         <p class="rodape3" >Desenvolvido por Damires Sales</p>
     </footer>
+
+    <script>
+        function mostrarmenu(){
+            document.querySelector("header nav").classList.toggle("mostrar")
+        }
+    </script>
+
 </body>
 </html>

@@ -13,10 +13,11 @@
     <header>
             <a href="index.html" title="Home">
                 <img src="imgs/logo.png" alt="Level Hard" title="Level Hard">
+                <span class="titulo">LEVEL HARD</span>
             </a>
 
-            <a href="javascript:mostrarmenu()" class="menu">
-                <i class="fa-solid fa-bars"></i>
+            <a href="javascript: mostrarmenu()" class="menu">
+                <i class="fas fa-bars"></i>
             </a>
             
             <nav>
@@ -62,7 +63,6 @@
                 </div>
             </div>
 
-            <i class="fa-solid fa-angle-down"></i>
             <h2 class="caracteristica">Características</h2>
             <div class="grid">
                 <div class="coluna">
@@ -81,14 +81,14 @@
 
                 <div class="coluna">
                     <div class="card">
-                        <h2>Níveis Brutais</h2>
+                        <h2 class="h2card2" >Níveis Brutais</h2>
                         <p>Fases feitas para testar sua paciência e habilidade.</p>
                     </div>
                 </div>
 
                 <div class="coluna">
                     <div class="card">
-                        <h2>Física Simples</h2>
+                        <h2 class="h2Fisica" >Física Simples</h2>
                         <p>Sem complicações. Apenas para você, plataformas e obstáculos mortais.</p>
                     </div>
                 </div>
@@ -157,9 +157,10 @@
     </footer>
 
     <script>
-        function mostrarmenu() {
-            document.querySelector("header nav").classList.toggle("mostrar");
+        function mostrarmenu(){
+            document.querySelector("header nav").classList.toggle("mostrar")
         }
     </script>
+
 </body>
 </html>

@@ -50,7 +50,7 @@ nav{
         }  
     }
 }
-section{
+main{
     h1{
         text-align: center;
         margin-top: 160px;
@@ -66,7 +66,7 @@ section{
     }
 }
 .grid{
-    grid-template-columns: repeat(3, 70, 30%);
+    grid-template-columns: 70%;
     display: grid;
     margin-top: 20px;
     margin-left: 220px;
@@ -74,9 +74,8 @@ section{
         .card1{
             display: inline-block;
             background-color: white;
-            height: 335px;
+            height: 285px;
             padding: 30px;
-            box-shadow: 0px 0px 5px gray;
             margin-top: 80px;
                 .mensagem{
                     font-weight: bold;
@@ -89,10 +88,9 @@ section{
         .card2{
             display: inline-block;
             background-color: white;
-            height: 500px;
+            height: 530px;
             padding: 30px;
-            box-shadow: 0px 0px 5px gray;
-            margin-top: 60px;
+            margin-top: 15px;
                 .mensagem{
                     font-weight: bold;
                 }
@@ -102,56 +100,209 @@ section{
             }
         }
     }
-
-    }
-
-    form{
-        display: flex;
-        flex-direction: column;
-        width: 600px;
-            input, textarea{
-                margin-bottom: 30px;
-                padding: 10px;
-                border: 1px solid #ccc;
-            }
-            button{
-                padding: 10px;
-                border: none;
-                background-color: #2f7aeb;
-                color: white;
-                font-size: 18px;
-                cursor: pointer;
-            }
-            button:hover{
-                background-color: rgba(36, 143, 231, 0.5);
-            }
-            select{
-                height: 30px;
-                margin-bottom: 20px;
-            }
-            .formulario:focus{
-                background-color: rgba(118, 187, 239, 0.5);
-            }
 }
 
-
-.grid2{
-    background: white;
+form{
     display: flex;
-    grid-template-columns: 100%;
-    float: right;
-    .coluna2{
-        .card2{
-            .pedido{
-                margin-left: 25px;
-            }
+    flex-direction: column;
+    width: 600px;
+        input, textarea{
+            margin-bottom: 30px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            background-color: #2f7aeb;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgba(36, 143, 231, 0.5);
+        }
+        select{
+            height: 30px;
+            margin-bottom: 20px;
+        }
+        .formulario:focus{
+            background-color: rgba(118, 187, 239, 0.5);
         }
     }
+
+.grid2{
+    float: right;
+    display: grid;
+    grid-template-columns: 30%;
+        .coluna2{
+            .resumocompra{
+                background: white;
+                width: 380px;
+                padding: 30px;
+                margin-top: -950px;
+                margin-right: 175px;
+                height: 890px;
+                h2{
+                    font-size: 20px;
+                    margin-bottom: 25px;
+                    color: #443e3e;
+                }
+
+                .cardcompra{
+                    display: grid;
+                    grid-template-columns: 80px 1fr;
+                    grid-template-areas: "img nome" "img tipo" "img estrela";
+                }
+
+                .carrinho{
+                    grid-area: img;
+                    width: 80px;
+                    background-color: #add8e6;
+                }
+
+                .nome{
+                    grid-area: nome;
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin-left: 10px;
+                }
+
+                .tipo{
+                    grid-area: tipo;
+                    color: #443e3e;
+                    margin-left: 10px;
+                }
+
+                .estrela{
+                    grid-area: estrela;
+                    width: 80px;
+                    margin-top: 5px;                
+                }
+
+                .subtotal, .desconto, .total{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    font-size: 16px;
+                    margin-top: 12px;
+                }
+
+                .preco{
+                    text-decoration: line-through;
+                    color: #999;
+                }
+
+                .desconto{
+                    color: #2e7d32;
+                    font-weight: bold;
+                }
+
+                .total{
+                    border-top: 1px solid #eee;
+                    padding-top: 15px;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+
+                .beneficios{
+                    list-style: none;
+                    padding: 0;
+                    margin: 25px 0;
+                }
+
+                .beneficios li{
+                    font-size: 14px;
+                    color: #555;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .btn-finalizar{
+                    width: 100%;
+                    text-decoration: none;
+                    background-color: #5ea4c1;
+                    color: white;
+                    border: none;
+                    padding: 16px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+                .btnfinalizar:hover{
+                    background-color: #4a8ca8;
+                }
+
+                .info-segura{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    color: #888;
+                    margin-top: 20px;
+                }
+
+                .btn-voltartelainicial{
+                    display: block;
+                    text-align: center;
+                    margin-top: 20px;
+                    color: #5ea4c1;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+                .btn-voltartelainicial:hover{
+                    text-decoration: underline;
+                }
+        }
+    }
+}
+
+.metodospagamento{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+input[type="radio"]{
+    display: none;
+}
+.cartao-metodo{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+    background-color: #fcfcfc;
+    transition: all 0.2s ease-in-out;
+}
+.conteudo{
+    display: flex;
+    flex-direction: column;
+}
+.conteudo strong{
+    font-size: 15px;
+    color: #333
+}
+.conteudo span{
+    font-size: 12px;
+    color: #666;
+}
+
+input[type="radio"]:checked + .cartao-metodo {
+    border-color: #2c3e50;
+    background-color: white;
+}
+.cartao-metodo:hover{
+    border-color: #b0b0b0;
 }
 
 footer{
     background-color: rgba(255, 255, 255, 0.5);
     height: 250px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
     .grid3{
         display: grid;
         grid-template-columns: repeat(3,33%);
@@ -180,4 +331,135 @@ footer{
         color: rgb(54, 52, 52);
         padding: 30px;
     }
+}
+
+.menu{
+    display: none;
+}
+.mostrar{
+    display: block;
+}
+.titulo{
+    display: none;
+}
+
+@media (max-width: 480px){
+    body{
+        text-align: center;
+    }
+    header nav ul{
+        margin: 0px;
+    }
+
+    header nav {
+        width: 100%;
+        float: right;
+        margin-top: 20px;
+        background-color: #FFF;
+        display: none;
+    }
+
+    header{
+        height: 100px;
+        padding: 0px;
+        width: 430px;
+        display: block;
+        background-color: white;
+    }
+
+    header nav ul li{
+        display: block;
+    }
+
+    header img{
+        height: 60px;
+        margin-top: 20px;
+        float: left;
+        margin-left: 40px;
+    }
+
+    .titulo{
+        display: block;
+        text-decoration: none;
+        float: left;
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 20px;
+        color: black;
+    }
+
+    .menu{
+        display: block;
+        border: 1px solid rgba(5, 92, 164, 0.5);
+        padding: 10px 15px;
+        color: black;
+        float: right;
+        margin-top: 30px;
+        margin-right: 65px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-left: 0;
+        .coluna{
+            .card1{
+                width: 75%;
+                margin-top: 48px;
+                height: 302px;
+            }
+            form{
+                width: 100%;
+                .nome{
+                    margin-right: 177px;
+                }
+                .email{
+                    margin-right: 270px;
+                }
+                .cpf{
+                    margin-right: 290px;
+                }
+            }
+
+            .card2{
+                width: 75%;
+                height: 600px;
+                margin-bottom: 15px;
+            }
+            .cartao{
+                margin-right: 180px;
+            }
+            .nomeC{
+                margin-right: 193px;
+            }
+            .validade{
+                margin-right: 250px;
+            }
+            .cvv{
+                margin-right: 290px;
+            }
+            .parcela{
+                margin-right: 215px;
+            }
+        }
+}
+
+.grid2{
+    .coluna2{
+        .resumocompra{
+            width: 263%;
+            margin-right: 49px;
+            margin-top: 3px;
+            height: 510px;
+        }
+    }
+}
+
+    footer{
+        height: 600px;
+        margin-top: 640px;
+            .grid3{
+                grid: none;
+            }
+        }
 }
