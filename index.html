@@ -9,8 +9,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="imgs/logo.png">
 </head>
-<body>
-    <header>
+<body id="corpoDaPagina">
+        <header id="mainHeader">
             <a href="index.html" title="Home">
                 <img src="imgs/logo.png" alt="Level Hard" title="Level Hard">
                 <span class="titulo">LEVEL HARD</span>
@@ -23,13 +23,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="./index.html">INÍCIO</a>
+                        <a class="inicio" href="./index.html">INÍCIO</a>
                     </li>
                     <li>
-                        <a href="./historia.html">HISTÓRIA</a>
+                        <a class="historia" href="./historia.html">HISTÓRIA</a>
                     </li>
                     <li>
-                        <a href="./contato.html">CONTATO</a>
+                        <a class="contato" href="./contato.html">CONTATO</a>
                     </li>
                     <li>
                         <a class="compra" href="./comprar.html">COMPRAR</a>
@@ -39,7 +39,24 @@
     </header>
 
     <main>
-        <h1>LEVEL HARD</h1>
+        <div class="tema">
+        <i id="iconetema" class="fa-solid fa-toggle-off"></i>
+        </div>
+
+        <script>
+        const iconetema = document.getElementById("iconetema");
+        const header = document.getElementById("mainHeader");
+
+        iconetema.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark-tema");
+            header.classList.toggle("dark-header");
+            iconetema.classList.toggle("fa-toggle-off");
+            iconetema.classList.toggle("fa-toggle-on");
+        });
+        </script>
+        
+        <h1 class="tituloP">LEVEL HARD</h1>
         <p class="descricao">Um jogo de plataforma simples, mas brutalmente difícil. Pule, corra e sobreviva pelos<br> níveis mais desafiadores.</p>
         <img class="imgcapa" src="imgs/jogo.png"  alt="Capa do jogo" title="Capa do jogo">
             <div class="container">
@@ -48,7 +65,7 @@
                     <span class="ava">(4.8/5 - 2.847 avaliações) | +5.000 jogadores</span>
                 </div>
 
-                <div class="card-preco">
+                <div class="cardpreco">
                     <p class="preco-antigo">R$ 49,90</p>
 
                     <div class="linha-preco">
@@ -127,6 +144,29 @@
                 </div>
     </main>
 
+    <script>
+        const ANO_LANCAMENTO = 2026;
+        let anoAtual = new Date().getFullYear();
+
+        if (anoAtual == ANO_LANCAMENTO) {
+            alert("🎮 Pare de jogar o básico. O LEVEL HARD chegou para testar seus limites.");
+        }
+
+        let nomeVisitante = prompt("Bem-vindo ao site do LEVEL HARD! Digite seu nome e prepare-se para o desafio.");
+        let idadeVisitante = Number(prompt("Olá, " + nomeVisitante + ", Seja Bem-Vindo! Qual a sua idade?"));
+
+        const body = document.getElementById("corpoDaPagina")
+
+
+        if (idadeVisitante >= 18) {
+            alert("Parabéns, " + nomeVisitante + "! Você tem permissão total para vizualizar o conteúdo.");
+            document.getElementById("corpodaPagina").style.filter = "none";
+        } else {
+            alert(" Acesso limitado. " + nomeVisitante + " Por diretrizes de segurança para a sua idade, ocultamos parte do conteúdo visual.");
+            document.getElementById("corpoDaPagina").style.filter = "blur(20px)";
+        }
+    </script>
+
     <footer>
         <div class="grid3">
             <div class="coluna3">
@@ -162,5 +202,10 @@
         }
     </script>
 
+    
 </body>
+
+<script>
+    
+</script> 
 </html>

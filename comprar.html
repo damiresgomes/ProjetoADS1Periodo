@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="description" content="Site de um jogo de plataforma 2d (Level Hard)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="styleCo.css">
     <link rel="icon" href="imgs/logo.png">
 </head>
-<body>
+<body id="corpoDaPagina">
     <header>
         <a href="index.html" title="Home">
             <img src="imgs/logo.png" alt="Level Hard" title="Level Hard">
             <span class="titulo">LEVEL HARD</span>
         </a>
-
         <a href="javascript: mostrarmenu()" class="menu">
             <i class="fa-solid fa-bars"></i>
         </a>
@@ -147,11 +147,33 @@
                                 <span>Acesso Imediato</span>
                             </div>
                             <a href="index.html" class="btn-voltartelainicial"> Voltar para a página inicial</a>
+                            <img src="imgs/bandeiras.png" alt="bandeiras" title="bandeiras" class="bandeiras">
                         </div>
                     </div>
                 </div>
             </div>
+
+            <section class="informacoes-jogo">
+                        <div class="informacoes">
+                            <p> <strong>Gênero</strong> <span id="info-gen"></span> </p>
+                            <p> <strong>Plataforma</strong> <span id="info-plat"></span> </p>
+                            <p> <strong>Preço</strong> <span id="info-preco"></span> </p>
+                            <p> <strong>Classificação</strong> <span id="info-idade"></span> </p>
+                        </div>
+            </section>
     </main>
+
+    <script>
+        const genJogo = "Plataforma";
+        const platJogo = "Pc";
+        const precoJogo = "R$ 29,90";
+        const idadeJogo = "18 anos";
+
+        document.getElementById("info-gen").innerText = genJogo;
+        document.getElementById("info-plat").innerText = platJogo;
+        document.getElementById("info-preco").innerText = precoJogo;
+        document.getElementById("info-idade").innerText = idadeJogo;
+    </script>
 
      <footer>
         <div class="grid3">

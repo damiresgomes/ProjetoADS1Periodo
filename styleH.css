@@ -16,8 +16,9 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 1px 100px;
-    box-shadow: 0px 0px 5px gray;   
+    box-shadow: 0px 0px 5px gray;
 }
+
 nav{
     ul{
         margin-right: 150px;
@@ -72,34 +73,31 @@ main{
     .center {
         text-align: center;
     }
-        .grid{
-            display: inline-grid;
-            grid-template-columns: 50% 50%; 
+.grid{
+    display: inline-grid;
+    grid-template-columns: 50% 50%; 
         .coluna, .colunaparte2{
             margin: 20px;
-            .card1{
-                background: rgb(226, 230, 233);
-                margin-top: 50px;
-                height: 309px;
-                .card1:hover{
-                    color: #443e3e;
-                    transition: 0.5s;
-                }
-                .mundo{
-                    padding: 20px 20px 10px 80px;
-                    font-size: 30px;
-                }
-                .texto1{
-                    color: #443e3e;
-                    font-size: 20px;
-                    margin: 15px 30px 30px 30px;
-                }
-                .texto2{
-                    color: #443e3e;
-                    font-size: 20px;
-                    margin: 10px 30px 30px 30px;
-                }
-          }    
+        .card1{
+            background: rgb(226, 230, 233);
+            margin-top: 50px;
+            height: 309px;
+
+            .mundo{
+                padding: 20px 20px 10px 80px;
+                font-size: 30px;
+            }
+            .texto1{
+                color: #443e3e;
+                font-size: 20px;
+                margin: 15px 30px 30px 30px;
+            }
+            .texto2{
+                color: #443e3e;
+                font-size: 20px;
+                margin: 10px 30px 30px 30px;
+            }
+        }    
             .card2, .cardparte2{
                 margin-top: 50px;
                 height: 300px;
@@ -110,6 +108,7 @@ main{
 
             }         
         }
+    
     }
 }
 
@@ -195,10 +194,11 @@ footer{
     }
 
     header img{
-        height: 60px;
-        margin-top: 20px;
+        height: 50px;
+        margin-top: 25px;
         float: left;
         margin-left: 40px;
+        margin-right: 0;
     }
 
     .titulo{
@@ -218,7 +218,7 @@ footer{
         color: black;
         float: right;
         margin-top: 30px;
-        margin-right: 65px;
+        margin-right: 40px;
     }
 
     main{

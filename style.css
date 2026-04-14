@@ -20,6 +20,13 @@ header{
     box-shadow: 0px 0px 5px gray;
 }
 
+body { background-color: rgba(118, 187, 239, 0.5); color: black; transition: 0.3s; }
+header { background-color: #ffffff; }
+
+body.dark-mode { background-color: rgb(40, 40, 40); color: rgb(0, 0, 0); }
+body.dark-mode header { background-color: #1a1a1a; }
+body.dark-mode button { background-color: #444; color: white; }
+
 nav{
     ul{
         margin-right: 150px;
@@ -49,6 +56,63 @@ nav{
     }
 }
 
+body.dark-tema {
+background-color: #000000;
+color: #f5f5f5;
+}
+.dark-header {
+background-color: #000;
+color: #fff;
+}
+
+
+.tema {
+position: fixed;
+top: 20px;
+left: -720px;
+cursor: pointer;
+font-size: 24px;
+}
+
+body {
+background-color: rgba(118, 187, 239, 0.5);
+color: #000;
+}
+
+header {
+background-color: #fff;
+color: #000;
+}
+
+.cardpreco{
+    background-color: #fff;
+    color: #000; 
+}
+
+body.dark-tema .tituloP,
+body.dark-tema .descricao,
+body.dark-tema .ava,
+body.dark-tema .segundoh2,
+body.dark-tema .caracteristica,
+body.dark-tema nav a.inicio,
+body.dark-tema nav a.historia,
+body.dark-tema nav a.contato{
+    color: #ffffff;
+}
+
+body.dark-tema h2,
+body.dark-tema .h2card2,
+body.dark-tema .h2Fisica,
+body.dark-tema p,
+body.dark-tema .pgrid2,
+body.dark-tema .nomes,
+body.dark-tema .rodape,
+body.dark-tema .rodape2,
+body.dark-tema .rodape3{
+    color: black;
+}
+
+
 main{
     .imgcapa{
         position: fixed;
@@ -61,7 +125,7 @@ main{
         z-index: -1;
         background-repeat: no-repeat;
     }
-    h1{
+    .tituloP{
         text-align: center;
         margin-top: 140px;
         font-size: 80px;
@@ -86,7 +150,7 @@ main{
     .container{
         text-align: center;
     }
-    .card-preco{
+    .cardpreco{
         background: white;
         padding: 10px;
         width: 350px;
@@ -275,6 +339,9 @@ footer{
 .titulo{
     display: none;
 }
+#btn-tema{
+    display: block;
+}
 
 @media (max-width: 480px){
     .imgcapa{
@@ -293,12 +360,20 @@ footer{
         display: none;
     }
 
+    .tema{
+        top: 50px;
+    }
+
     header nav ul{
         margin: 0px;
     }
 
-    header nav ul li{
-        display: block;
+    header nav {
+        width: 100%;
+        float: right;
+        margin-top: 20px;
+        background-color: #FFF;
+        display: none;
     }
 
     header{
@@ -309,19 +384,16 @@ footer{
         background-color: white;
     }
 
-    header nav {
-        width: 100%;
-        float: right;
-        background-color: #FFF;
-        display: none;
-        margin-top: 20px;
+    header nav ul li{
+        display: block;
     }
 
     header img{
-        height: 60px;
-        margin-top: 20px;
+        height: 50px;
+        margin-top: 25px;
         float: left;
         margin-left: 40px;
+        margin-right: 0;
     }
 
     .titulo{
@@ -336,12 +408,12 @@ footer{
 
     .menu{
         display: block;
+        border: 1px solid rgba(5, 92, 164, 0.5);
         padding: 10px 15px;
         color: black;
-        border: 1px solid rgba(5, 92, 164, 0.5);
         float: right;
         margin-top: 30px;
-        margin-right: 65px;
+        margin-right: 40px;
     }
 
     main .grid{
